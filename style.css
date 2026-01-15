@@ -20,27 +20,23 @@ main {
     justify-content: center;
     align-items: center;
     background-color: black;
-    /* gap: 10px; */
+    gap: 10px;
     color: white;
 }
 
 
 .box {
-    width: 150px;
-    height: 60px;
+    width: 200px;
+    height: 200px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: all linear 0.2s ;
 }
 
-.box:hover {
-    anchor-name: --some-anchor;
-
-}
-
-/* .red {
+.red {
     background-color: red;
 }
 .green {
@@ -48,18 +44,14 @@ main {
 }
 .yellow {
     background-color: yellow;
-} */
-.anchor {
-    background-color:rgba(255, 255, 255, 0.23);
-    position: absolute;
-    top: anchor(top);
-    left:anchor(left);
-    right:anchor(right);
-    bottom:anchor(bottom);
-    position-anchor: --some-anchor;
-    pointer-events: none;
-    transition: all 0.5s ease;
-    mix-blend-mode: difference;
-    border-radius: 20px;
+}
 
+
+.box:hover {
+   transform: scale(1.2) !important;
+
+}
+
+main:has(.box:hover) .box {
+    transform: scale(0.8);
 }
